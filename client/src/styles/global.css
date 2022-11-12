@@ -24,8 +24,7 @@ a {
   width: 300px;
 }
 
-.map-container {
-  width: 100vw;
+.map-container { 
   height: 100vh;
 }
 
