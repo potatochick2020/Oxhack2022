@@ -5,7 +5,7 @@ const RELAY_KEY = "9a178d38-6296-11ed-a09d-8692b700d4d6";
 
 const GEOCODE_ENDPOINT = "https://maps.googleapis.com/maps/api/geocode/json";
 const SEARCH_ENDPOINT = "https://maps.googleapis.com/maps/api/place/textsearch/json";
-const RELAY_ENDPOINT = "http://localhost:3000";
+const RELAY_ENDPOINT = "http://localhost:4000";
 
 async function callEndpoint(endpoint, request) {
     const data = await (fetch(endpoint + "?" + new URLSearchParams({
