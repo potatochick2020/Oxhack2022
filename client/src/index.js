@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import MainMapBlock from "./MainMapBlock";
+import SimpleMap from "./MainMapBlock";
+import Container from "@mui/material/Container";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <MainMapBlock />
-  </React.StrictMode>
+  <Container maxWidth="xl">
+    <SimpleMap />
+  </Container>
 );
