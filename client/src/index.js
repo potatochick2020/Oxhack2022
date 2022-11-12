@@ -11,7 +11,7 @@ root.render(
   <>
     <ButtonAppBar />
     <Grid container spacing={2}>
-      <Grid item xs={8} style={{height:"200px"}}>
+      <Grid item xs={8} >
         <GoGoMap />
       </Grid>
       <Grid item xs={4} style={{backgroundColor:"Black"}}></Grid>
