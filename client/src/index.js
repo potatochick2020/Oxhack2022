@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import SimpleMap from "./MainMapBlock";
+import GoogleMap from "./MainMapBlock";
 import Container from "@mui/material/Container";
 import ButtonAppBar from "./components/Navbar/Navbar";
 
