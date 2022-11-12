@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import ButtonAppBar from "./components/Navbar/Navbar";
  
 import Grid from "@mui/material/Grid";
+import SearchResult from "./components/SearchResult/searchResult";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
       <Grid item xs={8} >
         <GoGoMap />
       </Grid>
-      <Grid item xs={4} style={{backgroundColor:"Black"}}></Grid>
+      <Grid item xs={4} style={{backgroundColor:"Black"}}>
+        <SearchResult Address={"a"} keyword={"a"} country={"a"} />
+      </Grid>
     </Grid>
   </>
   // <Container maxWidth="xl">

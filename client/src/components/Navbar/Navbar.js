@@ -8,6 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';   
 import Modal from '@mui/material/Modal';
 import AddressForm from '../Form/Form';
+import getPlaces from "../../api"
+
 const style = {
     position: 'absolute' ,
     top: '50%',
@@ -24,6 +26,7 @@ export default function ButtonAppBar() {
     const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  console.log(getPlaces("food", ["Radcliffe observatory quater", "St Johns college", "Keble road"], "UK"))
   return (
     <>
     <Box sx={{ flexGrow: 1 }}>
