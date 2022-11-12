@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Container maxWidth="xl">
     <ButtonAppBar/>
-    <SimpleMap />
+    <GoogleMap />
   </Container>
 );
