@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import GoGoMap from "./components/Map/MainMapBlock";
 import Container from "@mui/material/Container";
 import ButtonAppBar from "./components/Navbar/Navbar";
- 
+
 import Grid from "@mui/material/Grid";
 import SearchResult from "./components/SearchResult/searchResult";
 
@@ -12,10 +12,10 @@ root.render(
   <>
     <ButtonAppBar />
     <Grid container spacing={2}>
-      <Grid item xs={8} >
+      <Grid item xs={8}>
         <GoGoMap />
       </Grid>
-      <Grid item xs={4} style={{backgroundColor:"Black"}}>
+      <Grid item xs={4} style={{ backgroundColor: "White" }}>
         <SearchResult Address={"a"} keyword={"a"} country={"a"} />
       </Grid>
     </Grid>
