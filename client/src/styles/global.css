@@ -8,11 +8,11 @@ body {
 }
 
 #root {
-    height: 100%;
+  height: 100%;
 }
 
 #root > .MuiGrid-root {
-    height: calc(100% - 3.2 * 1.25rem);
+  height: calc(100% - 3.2 * 1.25rem);
 }
 
 #root > .MuiGrid-root .MuiGrid-root {
@@ -35,4 +35,13 @@ a {
   transform: translateX(-50%);
   z-index: 10;
   width: 300px;
+}
+
+div.scroll {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 1%;
+  overflow: scroll;
 }
