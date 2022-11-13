@@ -6,9 +6,9 @@ function SearchResult({ Address, keyword, country }) {
   const [data, setData] = useState([]);
 
   const data_places = getPlaces(
-    "food",
-    ["Radcliffe observatory quater", "St Johns college", "Keble road"],
-    "UK"
+    Address,
+    keyword,
+    country 
   );
 
   // change promise object to array
