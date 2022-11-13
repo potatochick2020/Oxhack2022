@@ -22,7 +22,7 @@ export default function MarkersMap() {
       options={mapOptions}
       mapContainer={mapContainer}
     >
-      <div ref={(node) => setMapContainer(node)} style={{ height: "94vh" }} />
+      <div ref={(node) => setMapContainer(node)} style={{ height: "100%" }} />
       <Location lat={60} lng={60} />
       <Location lat={60.1} lng={60.1} />
     </GoogleMapProvider>
