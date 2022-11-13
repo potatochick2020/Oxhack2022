@@ -25,7 +25,11 @@ const style = {
 export default function ButtonAppBar() {
     const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+    const handleClose = () => setOpen(false);
+
+    window.addEventListener("settings-closed", () => {
+        setOpen(false);
+    });
   
   return (
     <>

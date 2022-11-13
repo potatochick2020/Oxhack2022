@@ -40,7 +40,11 @@ export default function AddressForm(){
 
     let handleSubmit = (event) => {
         event.preventDefault();
-        alert(JSON.stringify(addressesValues)+JSON.stringify(keywordsValues));
+        window.dispatchEvent(new CustomEvent("update-settings", {
+            detail: { addressesValues, keywordsValues }
+        }));
+        window.dispatchEvent(new Event("settings-closed"));
+        //        alert(JSON.stringify(addressesValues)+JSON.stringify(keywordsValues));
     }
 
     return (

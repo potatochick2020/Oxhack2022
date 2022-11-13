@@ -26,8 +26,17 @@ function SearchResult({ Address, keyword, country }) {
     });
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
+    window.addEventListener("update-settings", (e) => {
+        e.preventDefault();
+        getPlaces(
+            e.detail.keywordsValues.map((x) => x.Keyword).join(" "),
+            e.detail.addressesValues.map((x) => x.Address),
+            " UK"
+        ).then(setData);
+    });
+    
   return (
     // print out the data
 
