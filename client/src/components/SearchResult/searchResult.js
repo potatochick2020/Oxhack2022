@@ -22,7 +22,8 @@ function SearchResult({ Address, keyword, country }) {
 
   return (
     // print out the data
-    <div>
+  
+    <div class="scroll">
       {data.map(function (item, index) {
         return (
           <div key={index}>
