@@ -1,5 +1,3 @@
-"use strict";
-
 const API_KEY = "AIzaSyBqt7iKC_GUzNScBkKMF9vi52WIUYFw-m4";
 const RELAY_KEY = "9a178d38-6296-11ed-a09d-8692b700d4d6";
 
@@ -35,10 +33,6 @@ async function getCentre(addresses) {
     }
 
     return { lat: latsum / coords.length, lng: lngsum / coords.length };
-}
-
-async function nearby(request) {
-    const data = await callEndpoint(request);
 }
 
 export default async function getPlaces(query, addresses, extraAddr) {
