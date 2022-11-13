@@ -26,7 +26,7 @@ export default function ButtonAppBar() {
     const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  console.log(getPlaces("food", ["Radcliffe observatory quater", "St Johns college", "Keble road"], "UK"))
+  
   return (
     <>
     <Box sx={{ flexGrow: 1 }}>
@@ -36,7 +36,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             JFFT
           </Typography>
-          <Button style={{color:"white"}} onClick={handleOpen}>Open modal</Button>
+          <Button style={{color:"white"}} onClick={handleOpen}>Setting</Button>
         </Toolbar>
       </AppBar>
     </Box>
@@ -48,11 +48,11 @@ export default function ButtonAppBar() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+            Enter Addresses and Search keywords
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          </Typography> */}
           <AddressForm />
         </Box>
       </Modal>

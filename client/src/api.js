@@ -1,5 +1,5 @@
-const API_KEY = "AIzaSyBqt7iKC_GUzNScBkKMF9vi52WIUYFw-m4";
 const RELAY_KEY = "9a178d38-6296-11ed-a09d-8692b700d4d6";
+const API_KEY = "AIzaSyAxrVH96QRwara_SXvE-6J1g08gqvj6zZA";
 
 const GEOCODE_ENDPOINT = "https://maps.googleapis.com/maps/api/geocode/json";
 const SEARCH_ENDPOINT = "https://maps.googleapis.com/maps/api/place/textsearch/json";
@@ -36,6 +36,11 @@ async function getCentre(addresses) {
 }
 
 export default async function getPlaces(query, addresses, extraAddr) {
+    await (new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, 1000);
+    }));
     const centre = await getCentre(addresses.map((addr) => addr + extraAddr));
     return callEndpoint(RELAY_ENDPOINT, {
         relayKey: RELAY_KEY,

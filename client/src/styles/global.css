@@ -3,7 +3,20 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+               Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+#root > .MuiGrid-root {
+  height: calc(100% - 3.2 * 1.25rem);
+}
+
+#root > .MuiGrid-root .MuiGrid-root {
+  height: 100%;
 }
 
 a {
@@ -24,11 +37,11 @@ a {
   width: 300px;
 }
 
-.map-container { 
-  height: 100vh;
-}
-
-.combobox-input {
+div.scroll {
+  background-color: #FFFFFF;
   width: 100%;
-  padding: 0.5rem;
+  height: 100%;
+  float: left;
+  padding: 1%;
+  overflow: scroll;
 }
