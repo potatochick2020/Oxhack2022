@@ -33,7 +33,7 @@ function SearchResult({ Address, keyword, country }) {
         getPlaces(
             e.detail.keywordsValues.map((x) => x.Keyword).join(" "),
             e.detail.addressesValues.map((x) => x.Address),
-            " UK"
+            " " + e.detail.country
         ).then(setData);
     });
     

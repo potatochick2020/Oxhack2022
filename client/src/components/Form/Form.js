@@ -5,6 +5,7 @@ export default function AddressForm(){
 
     const [addressesValues, setaddressesValues] = useState([{ Address: ""}])
     const [keywordsValues, setkeywordsValues] = useState([{ Keyword: ""}])
+    const [country, setCountry] = useState("UK")
 
     let handleChangeAddresses = (i, e) => {
         let newaddressesValues = [...addressesValues];
@@ -41,7 +42,7 @@ export default function AddressForm(){
     let handleSubmit = (event) => {
         event.preventDefault();
         window.dispatchEvent(new CustomEvent("update-settings", {
-            detail: { addressesValues, keywordsValues }
+            detail: { addressesValues, keywordsValues, country }
         }));
         window.dispatchEvent(new Event("settings-closed"));
         //        alert(JSON.stringify(addressesValues)+JSON.stringify(keywordsValues));
@@ -49,6 +50,10 @@ export default function AddressForm(){
 
     return (
         <form  onSubmit={handleSubmit}>
+            <div className="form-inline">
+                <label>Country</label>
+                <input type="text" name="Country" value={country} onChange={e => setCountry(e.target.value)} />
+            </div>
           {addressesValues.map((element, index) => (
             <div className="form-inline" key={index}> 
               <label>Address</label>
