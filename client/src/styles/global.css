@@ -23,12 +23,3 @@ a {
   z-index: 10;
   width: 300px;
 }
-
-.map-container { 
-  height: 94vh;
-}
-
-.combobox-input {
-  width: 100%;
-  padding: 0.5rem;
-}
