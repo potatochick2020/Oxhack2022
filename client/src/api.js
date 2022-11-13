@@ -36,11 +36,6 @@ async function getCentre(addresses) {
 }
 
 export default async function getPlaces(query, addresses, extraAddr) {
-    await (new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve();
-        }, 1000);
-    }));
     const centre = await getCentre(addresses.map((addr) => addr + extraAddr));
     return callEndpoint(RELAY_ENDPOINT, {
         relayKey: RELAY_KEY,
